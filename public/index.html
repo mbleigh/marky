@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>Marky (Collaborative Markdown)</title>
+  <link rel="stylesheet" href="application.css" type="text/css" charset="utf-8">
+  <link rel='shortcut icon' href='favicon.ico'/>
+  <link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <script src="application.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    var jQuery  = require("jqueryify");
+    var exports = this;
+    jQuery(function(){
+      var App = require("index");
+      exports.app = new App({el: $("body")});      
+    });
+  </script>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-403425-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Marky!</h1>
+    <h2 id='pad_name'></h2>
+
+    <a id='etherpad_shoutout' href='http://etherpad.org' target='_blank'>
+      <i>Collaborative editor via</i>
+      <b>Etherpad.org</b>
+    </a>
+  </header>
+  <div id='pad'></div>
+  <div id='preview'></div>
+  <footer>
+    <span id='credit'>This fun little hack brought to you by Michael Bleigh. MIT Licensed, <a target="_blank" href="https://github.com/mbleigh/marky">source on GitHub</a>.</span>
+    <span id='links'>Like it? Check out <a href='http://intridea.com?utm_source=marky'>Intridea</a> and <a href='http://divshot.com?utm_source=marky'>Divshot</a>.</span>
+  </footer>
+  <div id='buffer' style='display: none;'></div>
+</body>
+</html>

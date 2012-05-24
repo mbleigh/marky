@@ -1,0 +1,103 @@
+@import './mixin'
+
+*
+  box-sizing border-box
+
+body
+  margin 0
+  padding 0
+  font-family Helvetica Neue, Helvetica, sans-serif
+
+header
+  position fixed
+  height 50px
+  width 100%
+  top 0
+  left 0
+  vbg-gradient #753 #642
+  border-bottom 5px solid #531
+  box-shadow 0 -4px 10px black
+  z-index 100
+  color #fff
+  h1
+    float left
+    margin 0 10px 0 0
+    font-family Noticia Text, Georgia, serif
+    font-size 28px
+    padding: 4px 10px
+    font-weight bold
+    letter-spacing -0.1em
+    text-shadow 1px 1px 4px rgba(0,0,0,0.4)
+  h2
+    background rgba(0,0,0,0.3)
+    border-radius 6px
+    padding: 6px 12px
+    font-size 18px
+    float: left
+    margin: 8px 0
+    cursor: pointer
+    &:empty
+      display: none
+  #etherpad_shoutout
+    float right
+    vbg-gradient #333 black
+    text-align center
+    padding 5px 8px
+    margin: 4px
+    border-radius 4px
+    box-shadow 1px 1px 4px black
+    opacity: 0.7
+    transition()
+    color white
+    text-decoration none
+    &:hover
+      opacity: 1.0
+    i
+      font-size: 10px
+      display: block
+
+
+footer
+  position: fixed
+  width: 100%
+  bottom: 0
+  left: 0
+  height 30px
+  padding 0 10px
+  line-height 30px
+  vbg-gradient #321, #210
+  box-shadow 0 2px 6px black
+  color: white
+  font-size: 12px
+  text-shadow 1px 1px 1px black
+  #credit
+    float left
+  #links
+    float right
+  a
+    color: #ffc
+
+#pad, #preview
+  position fixed
+  padding-top 50px
+  padding-bottom: 30px
+  width 50%
+  height 100%
+
+#pad
+  left 0
+
+#preview
+  font-family Noticia Text, Georgia, serif
+  left 50%
+  border-left 1px solid #ddd
+  padding 65px 20px 45px
+  h1, h2, h3, h4, h5, h6
+    margin 0 0 0.5em
+  p, ul, pre, ol
+    margin: 0 0 1em
+  pre code
+    display block
+    background: #f5f5f5
+    border-radius 5px
+    padding 10px
